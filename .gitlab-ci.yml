@@ -1,0 +1,9 @@
+pages:
+  script:
+    - mkdir public
+    - cp J.html public/
+  artifacts:
+    paths:
+      - "public"
+  only:
+  - main      

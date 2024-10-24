@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kya hi hoga</title>
+</head>
+<body>
+    <h1>Press on ok, why not jukebox</h1>
+    <!-- <h2>Press on ok why not jukebox</h2> -->
+    <!-- <h3>Press on ok why not jukebox</h3> -->
+    <!-- <h4>Press on ok why not jukebox</h4> -->
+    <!-- <h5>Press on ok why not jukebox</h5> -->
+    <!-- <h6>Press on ok why not jukebox</h6> -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eos odit qui quasi at ex itaque reiciendis fugit quibusdam earum repellat possimus necessitatibus aut, ullam cum! Aliquam distinctio quidem molestias.</p>
+    <!-- Absolute Link or Main Link -->
+    <h1><a href="https://www.youtube.com/channel/UCFT2zY_L0eRz9vW4MrvG_zQ">The Royals Publications</a><br></h1>
+    <a href="https://groww.in">Click here to go on groww</a><br>
+    <!-- Relative Link or Sub Link -->
+    <a href="index.html">Go to Index</a><br>
+
+    <!-- Image -->
+    <!-- We can also add image by copying the images in same directory -->
+     <img src="beach-1852945.jpg" alt="Error" width="121px">
+    <!-- Bold, Italic,Underline -->
+    <b>You are Nothing</b><br>
+    <i>Time remaining is 3 years</i><br>
+    <u>So,Fastern your Seatbelts</u><br>
+    <!-- Big and Small -->
+    <big>I'm Everything</big><br>
+    <small>You're Nothing</small><br>
+    <!-- Subscript and Superscript -->
+    <p>H<sub>2</sub>O</p>
+    <!-- pre Tag is used to render the things as it was -->
+    <pre>
+    Satyanarayan
+    # importing the modules
+    import PyPDF2
+    import pyttsx3
+    
+    # path of the PDF file
+    Audio_Book = open('E://Science//Motion.pdf','rb')
+    
+    # creating a PdfFileReader object
+    pdfReader = PyPDF2.PdfFileReader(Audio_Book)
+    
+    # the page with which you want to start
+    # this will read the page of 25th page.
+    Book_Page = pdfReader.numPages
+    Book_Speaker = pyttsx3.init()
+    Choose_Page = pdfReader.getPage(0)
+    
+    # extracting the text from the PDF
+    Book_text = Choose_Page.extractText()
+    
+    # reading the text
+    Book_Speaker.say(Book_text)
+    Book_Speaker.runAndWait()
+
+    </pre>
+</body>
+</html> 
